@@ -1,0 +1,54 @@
+.sidebar {
+    width: 15%;
+    text-align: center;
+}
+
+.sidebar .profile {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 15px;
+}
+
+.sidebar .profile img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 6px;
+}
+
+.sidebar .profile h6 {
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.sidebar .profile p {
+    font-size: 16px;
+
+}
+
+.sidebar .main-options {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 40px 0;
+    margin-bottom: 25px;
+}
+
+.sidebar .main-options ul li {
+    display: flex;
+    border: 1px solid #edeaea;
+    padding: 14px;
+    width: 70%;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    font-size: 18px;
+}
+
+.sidebar .main-options ul li:hover {
+    background-color: #e3f1fe;
+}
+
+.sidebar .main-options ul li img {
+    margin-right: 10px;
+}
+
+.sidebar p {
+    font-size: 16px;
+}
