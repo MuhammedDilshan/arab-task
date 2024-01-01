@@ -5,7 +5,7 @@ import "./Card.css";
 function Card() {
   return (
     <div>
-      <div className="card">
+      <section id="card">
         <div className="items">
           <h4>Basic</h4>
           <span>$ 89.99/mo</span>
@@ -17,18 +17,20 @@ function Card() {
           <h6>What youll get :</h6>
           <ul>
             <li>
-              <img src={assets.User} alt="User" /> <p>Up to 25 User</p>
+              <img src={assets.User} alt="User" /> <small>Up to 25 User</small>
             </li>
             <li>
-              <img src={assets.Cloud} alt="Cloud" /> <p>Up to 25gb storage</p>
+              <img src={assets.Cloud} alt="Cloud" />{" "}
+              <small>Up to 25gb storage</small>
             </li>
             <li>
-              <img src={assets.Email} alt="Email" /> <p>Up to 25 User</p>
+              <img src={assets.Email} alt="Email" />{" "}
+              <small>Up to 25 User</small>
             </li>
           </ul>
-          <button>Explore feature</button>
+          <button className="explore">Explore feature</button>
         </div>
-      </div>
+      </section>
     </div>
   );
 }

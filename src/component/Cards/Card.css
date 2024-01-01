@@ -1,20 +1,43 @@
-.card .items {
+#card .items {
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    width: 30%;
+    width: 20%;
+    padding: 30px;
 }
 
-.card .items h4 {
+#card .items h4 {
     font-size: 28px;
 }
 
-.card .items span {
+#card .items span {
+    font-size: 12px;
+}
+
+#card .items h5 {
     font-size: 14px;
+    margin-bottom: 6px;
 }
 
-.card .items button.start {
+#card .items button.start {
     display: flex;
+    margin-bottom: 14px;
 }
 
-.card .items ul li {
+#card .items h6 {
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+#card .items ul li {
     display: flex;
+
+}
+
+#card .items ul li img {
+    margin-right: 8px;
+}
+
+#card .items ul li small {}
+
+#card .items button.explore {
+    margin-top: 16px;
 }

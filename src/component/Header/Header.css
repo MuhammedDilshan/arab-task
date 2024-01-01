@@ -11,6 +11,11 @@ header .left-logo img.logo {
     width: 80px;
 }
 
+header .left-logo img.logo img {
+    display: block;
+    width: 100%;
+}
+
 header .right-container {
     display: flex;
     justify-content: space-between;
@@ -27,13 +32,21 @@ header .right-container .right-box {
     margin-right: 10px;
 }
 
-header .right-container .right-box .img-box img.side-logo {
+header .right-container .right-box .img-box {
     width: 50px;
 }
-header .right-container .right-box p{
+
+header .right-container .right-box .img-box img {
+    display: block;
+    width: 100%;
+}
+
+
+header .right-container .right-box p {
     font-size: 14px;
 }
-header .right-container .arrow-box{
+
+header .right-container .arrow-box {
     background-color: #fff;
     padding: 14px;
     border-radius: 8px;
