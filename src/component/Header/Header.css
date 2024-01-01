@@ -5,15 +5,30 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0 50px;
+    overflow: hidden;
+}
+
+header .left-logo {
+    position: relative;
+    z-index: 2;
+}
+
+header .left-logo::after {
+    content: "";
+    width: 160px;
+    height: 180px;
+    background-color: #fff;
+    display: block;
+    position: absolute;
+    z-index: -1;
+    left: -50px;
+    top: -80px;
+    transform: rotate(30deg);
+
 }
 
 header .left-logo img.logo {
     width: 80px;
-}
-
-header .left-logo img.logo img {
-    display: block;
-    width: 100%;
 }
 
 header .right-container {
@@ -28,26 +43,25 @@ header .right-container .right-box {
     justify-content: space-between;
     background-color: #fff;
     border-radius: 8px;
-    padding: 0 8px;
+    padding: 0 12px;
     margin-right: 10px;
 }
 
-header .right-container .right-box .img-box {
+header .right-container .right-box .img-box img.side-logo {
     width: 50px;
 }
 
-header .right-container .right-box .img-box img {
-    display: block;
-    width: 100%;
-}
-
-
 header .right-container .right-box p {
     font-size: 14px;
+    margin-bottom: 0;
+
 }
 
 header .right-container .arrow-box {
     background-color: #fff;
-    padding: 14px;
+    padding: 18px 18px;
     border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

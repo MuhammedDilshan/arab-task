@@ -1,14 +1,14 @@
 import React from "react";
 import Header from "../Header/Header";
 import Sidebar from "../Sidebar/Sidebar";
-import Dashbord from "../Dashbord/Dashbord";
+import Dashboard from "../Dashboard/Dashbord";
+import Container from "../Container";
 
 function Home() {
   return (
     <div>
       <Header />
-      <Sidebar />
-      <Dashbord />
+      <Container />
     </div>
   );
 }
