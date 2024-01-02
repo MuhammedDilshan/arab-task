@@ -9,6 +9,10 @@
     margin-right: 24px;
 }
 
+#card .items:last-child {
+    margin-right: 0;
+}
+
 #card .items h4 {
     font-size: 28px;
 }

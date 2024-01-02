@@ -13,6 +13,7 @@ import User from "./images/user-regular.svg";
 import Cloud from "./images/cloud-arrow-up-solid.svg";
 import Email from "./images/envelope-regular.svg";
 import Notification from "./images/bell-regular.svg";
+import Tick from "./images/tick.svg";
 
 export const assets = {
   Logo,
@@ -30,4 +31,5 @@ export const assets = {
   Cloud,
   Email,
   Notification,
+  Tick,
 };
