@@ -1,5 +1,4 @@
 import Home from "./component/Home/Home";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
 function App() {

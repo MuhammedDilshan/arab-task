@@ -21,9 +21,11 @@ function Dashboard() {
             </span>
           </div>
         </div>
-        {plans?.map((plan) => (
-          <Card data={plan} />
-        ))}
+        <div className="list-card">
+          {plans?.map((plan) => (
+            <Card data={plan} />
+          ))}
+        </div>
       </section>
     </div>
   );

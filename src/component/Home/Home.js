@@ -1,8 +1,6 @@
 import React from "react";
 import Header from "../Header/Header";
-import Sidebar from "../Sidebar/Sidebar";
-import Dashboard from "../Dashboard/Dashbord";
-import Container from "../Container";
+import Container from "../Container/Container";
 
 function Home() {
   return (

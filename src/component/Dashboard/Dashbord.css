@@ -1,6 +1,6 @@
 #dashbord-page {
     width: 900px;
-    padding: 40px 0 0 40px;
+    padding: 20px 0 0 40px;
 }
 
 #dashbord-page h3 {
@@ -45,7 +45,7 @@
     content: "";
     width: 125px;
     height: 100%;
-    background: #555555;
+    background: #e3f1fe;
     display: block;
     position: absolute;
     top: 0;
@@ -61,4 +61,8 @@
 #dashbord-page p span:hover {
     background-color: #e3f1fe;
     cursor: pointer;
+}
+
+.list-card {
+    display: flex;
 }

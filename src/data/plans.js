@@ -1,6 +1,14 @@
 export const plans = [
   {
     name: "basic",
+    old_amount: 89,
+    amount: 9.99,
+    user: 25,
+    storage: 30,
+    mail: 30,
+  },
+  {
+    name: "Standard",
     old_amount: 10,
     amount: 100,
     user: 25,
@@ -8,15 +16,7 @@ export const plans = [
     mail: 30,
   },
   {
-    name: "normal",
-    old_amount: 10,
-    amount: 100,
-    user: 25,
-    storage: 30,
-    mail: 30,
-  },
-  {
-    name: "premoum",
+    name: "Premium",
     old_amount: 10,
     amount: 100,
     user: 25,
