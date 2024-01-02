@@ -23,7 +23,7 @@
 
 #card .items h5 {
     font-size: 14px;
-    margin-bottom: 6px;
+    margin-bottom: 10px;
 }
 
 #card .items button.start {
@@ -34,6 +34,13 @@
     border: none;
     padding: 6px;
     border-radius: 4px;
+    cursor: pointer;
+    transition: .3s ease-in;
+}
+
+#card .items button.start:hover {
+    transition: .3s ease-in;
+    transform: scale(1.1);
 }
 
 #card .items button.start img {
@@ -62,4 +69,11 @@
     border-bottom: 1px solid #000;
     outline: none;
     background-color: #fff;
+    cursor: pointer;
+    transition: .3s ease-in;
+}
+
+#card .items button.explore:hover {
+    transition: .3s ease-in;
+    transform: scale(1.1);
 }
