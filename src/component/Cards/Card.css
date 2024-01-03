@@ -9,6 +9,10 @@
     margin-right: 24px;
 }
 
+#card .items.wide-card {
+    width: 100%;
+}
+
 #card .items:last-child {
     margin-right: 0;
 }

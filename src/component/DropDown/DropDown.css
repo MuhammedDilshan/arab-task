@@ -1,0 +1,44 @@
+.drop-down button {
+    background-color: #fff;
+    padding: 18px 18px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    position: relative;
+}
+
+.drop-down .menu {
+    position: absolute;
+    right: 50px;
+    top: 30px;
+    background: #fff;
+    padding: 20px;
+    width: 100px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    z-index: 66;
+    border-radius: 10px;
+    transition: .3s ease;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.drop-down .menu.active {
+    top: 80px;
+    visibility: visible;
+    opacity: 1;
+}
+
+.drop-down .menu li {
+    margin-bottom: 16px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.drop-down .menu li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+
+}

@@ -2,11 +2,11 @@ import React from "react";
 import { assets } from "../../assets/Asset";
 import "./Card.css";
 
-function Card({ data }) {
+function Card({ data, isSmallDevice }) {
   return (
     <div>
       <section id="card">
-        <div className="items">
+        <div className={`${isSmallDevice && "wide-card"}  items`}>
           <h4>{data?.name}</h4>
           <span> {`$${data?.old_amount}/mo`}</span>
           <h5> {`$${data?.amount}/mo`}</h5>

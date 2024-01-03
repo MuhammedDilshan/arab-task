@@ -1,15 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { assets } from "../../assets/Asset";
 import "./Sidebar.css";
+import { useDimensions } from "../../utils/useDimentions";
 
 function Sidebar() {
+  const [expand, setExpand] = useState(false);
+  const { windowWidth, isSmallDevice } = useDimensions();
+  useEffect(() => {
+    windowWidth < 560 ? setExpand(true) : setExpand(false);
+  }, []);
+  const handleExpand = () => {
+    setExpand(!expand);
+  };
   return (
     <div>
-      <div className="sidebar">
-        <div className="profile">
-          <img src={assets.Profile} alt="Personimage" />
-          <h6>
-            Ram Mohan{" "}
+      <div className={`${expand && "active"} sidebar`}>
+        {windowWidth <= 1036 ? (
+          <div
+            className={`${expand ? "angled" : ""} arrow`}
+            onClick={() => handleExpand()}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="16"
@@ -18,36 +28,55 @@ function Sidebar() {
             >
               <path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
             </svg>
-          </h6>
-          <p>mail@gmail.com</p>
-        </div>
+          </div>
+        ) : (
+          ""
+        )}
+
+        {!expand && (
+          <div className="profile">
+            <img src={assets.Profile} alt="Personimage" />
+            <h6>
+              Ram Mohan{" "}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="16"
+                width="10"
+                viewBox="0 0 320 512"
+              >
+                <path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
+              </svg>
+            </h6>
+            <p>mail@gmail.com</p>
+          </div>
+        )}
         <div className="sidebar-content">
           <div className="main-options">
             <ul>
               <li>
                 <img src={assets.Dashbord} alt="Dashbord" />
-                <h5>Dashbord</h5>
+                {!expand && <h5>Dashbord</h5>}
               </li>
               <li>
                 <img src={assets.Perks} alt="Perks" />
-                <h5>Perks</h5>
+                {!expand && <h5>Perks</h5>}
               </li>
               <li>
                 <img src={assets.Addons} alt="Addons" />
-                <h5>Addons</h5>
+                {!expand && <h5>Addons</h5>}
               </li>
               <li>
                 <img src={assets.Faq} alt="Faq" />
-                <h5>FAQ</h5>
+                {!expand && <h5>FAQ</h5>}
               </li>
               <li>
                 <img src={assets.Support} alt="Support" />
-                <h5>Support</h5>
+                {!expand && <h5>Support</h5>}
               </li>
             </ul>
           </div>
           <button>
-            Logout
+            {!expand && "Logout"}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="16"

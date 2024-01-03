@@ -1,13 +1,19 @@
 import React from "react";
 import "./Dashbord.css";
 import Card from "../Cards/Card";
-import { useDashboard } from "./useDashboard";
 import { plans } from "../../data/plans";
 import FeaturePlan from "../FeaturePlan/FeaturePlan";
 import { featurePlans } from "../../data/featurePlans";
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore from "swiper/core";
+import { Autoplay, Pagination } from "swiper/modules";
+import { useDimensions } from "../../utils/useDimentions";
+import "swiper/css";
+
+SwiperCore.use([Pagination, Autoplay]);
 
 function Dashboard() {
-  const { handleDuration, duration } = useDashboard();
+  const { windowWidth, isSmallDevice } = useDimensions();
   return (
     <div>
       <section id="dashbord-page">
@@ -28,9 +34,45 @@ function Dashboard() {
           </div>
         </div>
         <div className="list-card">
-          {plans?.map((plan) => (
+          {windowWidth < 1380 ? (
+            <Swiper
+              spaceBetween={50}
+              slidesPerView={1}
+              pagination={{
+                clickable: true,
+              }}
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
+              }}
+              breakpoints={{
+                680: {
+                  slidesPerView: 1,
+                  spaceBetween: 20,
+                },
+                768: {
+                  slidesPerView: 2,
+                  spaceBetween: 40,
+                },
+                1024: {
+                  slidesPerView: 2,
+                  spaceBetween: 50,
+                },
+              }}
+            >
+              {plans?.map((plan) => (
+                <SwiperSlide>
+                  <Card data={plan} isSmallDevice={isSmallDevice} />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          ) : (
+            plans?.map((plan) => <Card data={plan} />)
+          )}
+
+          {/* {plans?.map((plan) => (
             <Card data={plan} />
-          ))}
+          ))} */}
         </div>
         <div className="feature-plans">
           {featurePlans.map((plan) => (

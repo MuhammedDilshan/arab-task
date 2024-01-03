@@ -94,3 +94,23 @@
 .plan-card .right-content ul li img {
     margin-right: 8px;
 }
+
+@media all and (max-width:1280px) {
+    .feature-plans {
+        flex-direction: column;
+        width: 100%;
+    }
+
+
+    .plan-container {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+@media all and (max-width:560px) {
+    .plan-card {
+        flex-direction: column;
+    }
+}
